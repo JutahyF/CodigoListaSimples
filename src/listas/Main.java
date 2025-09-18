@@ -16,6 +16,29 @@ public class Main {
 		//for (int i=0;i<1000;i++) {
 			//l.inserirIni(i);
 		//}
-		//System.out.println("Acabou");
+		
+		/*for(int i=0; i<1000;i++) {
+			l.inserirFim(5);
+		}*/
+		
+		System.out.println("Acabou");
+		
+		/*ListaDupla ld=new ListaDupla();
+		ld.inserirIni("casa ");
+		ld.inserirIni("Lote ");
+		ld.inserirIni("Apartamento ");*/
+		
+		ListaDupla ld=new ListaDupla();
+		ld.inserirFim(" casa");
+		ld.inserirFim(" Lote");
+		ld.inserirFim(" Apartamento");
+		
+		ld.remover(" Apartamento");
+		ld.imprimir();
+		
+		for(int i=0;i<100000;i++) {
+			ld.inserirFim("Teste");
+		}
+		System.out.println("Acabou");
 	}
 }
