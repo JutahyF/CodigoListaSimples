@@ -82,8 +82,32 @@ public class ListaSimples {
 			atual=atual.prox;
 		}
 		for(No atual2=ini;atual2!=null;atual2=atual2.prox) {
-			System.out.println("valor2 "+ atual2.valor);
+			//System.out.println("valor2 "+ atual2.valor);
 		}
+		System.out.println("------------");
 	}
 	
+	public void imprimirRev() {
+		ListaSimples aux=new ListaSimples();
+		No atual=ini;
+		while(atual!=null) {
+			aux.inserirIni(atual.valor);
+			atual=atual.prox;
+		}
+		aux.imprimir();
+	}
+	
+	public void imprimirRevRec() {
+		//System.out.println("a";)
+		//imprimirRevRec();
+		imprimirRevRec(ini);
+		System.out.println("------------");
+	}
+	private void imprimirRevRec(No atual) {
+		if(atual==null)
+			return;
+		/*imprimirRevRec(atual.prox); // Ordem inversa */
+		System.out.println("ValorRec"+ atual.valor);
+		imprimirRevRec(atual.prox); // ordem normal
+	}
 }

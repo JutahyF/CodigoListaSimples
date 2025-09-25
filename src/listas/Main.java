@@ -40,5 +40,10 @@ public class Main {
 			ld.inserirFim("Teste");
 		}
 		System.out.println("Acabou");
+		
+		ListaCircular lc=new ListaCircular();
+		lc.inserirFim(10);
+		lc.inserirFim(5);
+		lc.imprimir();
 	}
 }
